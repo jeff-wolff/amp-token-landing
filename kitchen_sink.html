@@ -5,9 +5,9 @@
     <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.8.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5 Kitchen Sink</title>
+    <title>Kitchen Sink</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         form > div > label {
             display: block;
@@ -23,18 +23,47 @@
 
 <body>
     <!--
-
             DOM Content Models
             https://html.spec.whatwg.org/multipage/dom.html#content-models
-
     -->
     <main>
         <section class="container">
-            <h1>Style Guide</h1>
+            <h1>The HTML Kitchen Sink</h1>
+            <div style="display:flex;flex-wrap:wrap;">
+                <a style="
+                    margin-right: 10px;
+                "
+                    href="#heading">Heading Content</a><br>
+                <a style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                "
+                    href="#palpable">Palpable Content</a><br>
+                <a style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                "
+                    href="#phrasing">Phrasing Content</a><br>
+                <a style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                "
+                    href="#embedded">Embedded Content</a><br>
+                <a style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                "
+                    href="#interactive">Interactive Content</a><br>
+                <a style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                "
+                    href="#sectioning">Sectioning Content</a>
+            </div>
         </section>
         <hr>
         <section class="container">
-            <h1>Heading Content</h1>
+            <h1 id="heading">Heading Content</h1>
             <hgroup>
                 <h1>h1 I am most important.</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsam doloribus nam aut ipsum expedita illum nobis temporibus, id est fugiat illo, quos natus deserunt quo sequi nisi delectus repellendus maxime eius tempora! Culpa adipisci suscipit quod reprehenderit.</p>
@@ -64,7 +93,7 @@
         </section>
         <hr>
         <section class="container">
-            <h1 id="">Palpable Content</h1>
+            <h1 id="palpable">Palpable Content</h1>
             <p><code>a</code>:<br> <a href="http://example.com">Example</a>.</p>
             
             <p><code>p</code>:</p>
@@ -427,7 +456,7 @@
         </section>
         <hr>
         <section class="container">            
-        <h1>Phrasing Content</h1>
+        <h1 id="phrasing">Phrasing Content</h1>
             
             <p><code>abbr</code>:<br> Some vehicles meet the <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr> standard.</p>
             <p><code>b</code> which is used to <b>draw attention</b> without the
@@ -504,7 +533,7 @@
         </section>
         <hr>
         <section class="container">
-            <h1>Embedded Content</h1>
+            <h1 id="embedded">Embedded Content</h1>
             <p>Elements <code>audio</code>, <code>canvas</code>, <code>embed</code>, <code>iframe</code>, <code>img</code>, <code>math</code>, <code>object</code>, <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded content</em> category.</p>
             
             <p><code>audio</code>:<br> <audio controls="" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg">
@@ -573,7 +602,7 @@
         </section>
         <hr>
         <section class="container">
-            <h1>Interactive Content</h1>
+            <h1 id="interactive">Interactive Content</h1>
             <p><code>details</code> and <code>summary</code>:<br></p>
             <details>
                 <summary>Copying... <progress max="375505392" value="97543282"></progress> 25%</summary>
@@ -594,7 +623,7 @@
         </section>
         <hr>
         <section class="container">            
-            <h1>Sectioning Content</h1>
+            <h1 id="sectioning">Sectioning Content</h1>
             <aside>
                 <p>This is contained in an <code>aside</code> element.</p>
             </aside>
