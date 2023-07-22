@@ -611,7 +611,7 @@ footer .logo {
 }
 @media (min-width: 768px) {
     .footer__legal {
-        font-size: 15px;
+        font-size: 13px;
         margin-top: 0;
     }
 }
