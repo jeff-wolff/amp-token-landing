@@ -228,7 +228,7 @@ header .social-nav {
 
 /* Containers */
 .container {
-    border: 1px dashed yellowgreen;
+    /* border: 1px dashed yellowgreen; */
     position: relative;
     max-width: var(--container-width);
     margin-left: auto;
@@ -253,6 +253,8 @@ header .social-nav {
 
 
 .hero {
+    
+    min-height: 670px;
     height: 100vh;
     
     background-image: linear-gradient(to bottom, rgba(255,255,255,0) 66%,rgba(0,0,0,1) 100%);
@@ -261,6 +263,7 @@ header .social-nav {
 }
 @media (min-width: 1025px) {
     .hero {
+        min-height: 590px;
         padding-top: var(--header-height-lg);
     }
 }
@@ -305,14 +308,21 @@ header .social-nav {
     }
 }
 
+.mast {
+    margin-top: 70px;
+}
+@media (min-height: 800px) {
+    
+}
 @media (min-width: 768px) {
     .mast {
+        margin-top: 0;
         min-height: 270px;
         display: flex;
         align-items: center;
     }
     .mast > div:nth-child(1) {
-        width: 30%;
+        width: 40%;
         margin-left: 4%;
         margin-right: 12%;
     }
@@ -321,7 +331,7 @@ header .social-nav {
     }
 }
 @media (min-width: 1025px) {
-    .mart {
+    .mast {
         align-items: flex-end;
     }
     .mast > div:nth-child(1) {
@@ -347,8 +357,13 @@ header .social-nav {
 }
 
 .lower-third {
-    padding-top: 20px;
+    padding-top: 60px;
     margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .lower-third {
+        padding-top: 20px;
+    }
 }
 @media (min-height: 900px) {
     .lower-third {
@@ -356,10 +371,15 @@ header .social-nav {
     }   
 }
 .lower-third-content {
-    text-align: center;
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
     max-width: 82ch;
+}
+@media (min-width: 768px) {
+    .lower-third-content {
+        text-align: center;
+    }
 }
 .lower-third-content .content {
     margin-bottom: 2.5rem;
@@ -371,6 +391,21 @@ header .social-nav {
 }
 .lower-third-content .title {
     margin-bottom: 0;
+}
+
+.feature-list-wrap {
+    position: relative;
+    padding-bottom: 140px;
+}
+@media (min-width: 768px) {
+    .feature-list-wrap {
+        padding-bottom: 250px;
+    }
+}
+@media (min-width: 1025px) {
+    .feature-list-wrap {
+        padding-bottom: 40vw;
+    }
 }
 
 .feature-list {
@@ -430,7 +465,30 @@ header .social-nav {
 
 
 footer {
-    margin-top: 500px;
+    position: relative;
+    
+}
+@media (min-height: 900px) {
+    footer {
+        
+    }
+}
+
+.footer-hero-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    object-fit: cover;
+    z-index: -1;
+}
+
+@media (min-width: 1025px) {
+    .footer-hero-bg {
+        bottom: auto;
+        top: 0;
+    }
 }
 
 footer > .container {
