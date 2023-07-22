@@ -82,7 +82,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    margin-bottom: 2rem;
+}
+h4, h5, h6 {
+    font-weight: 700;
+    font-size: 1.15em;
 }
 
 h1 {
@@ -404,7 +407,7 @@ header .social-nav {
 }
 @media (min-width: 1025px) {
     .feature-list-wrap {
-        padding-bottom: 40vw;
+        padding-bottom: 29vw;
     }
 }
 
@@ -567,7 +570,7 @@ footer .footer__right {
     position: relative;
     width: fit-content;
 }
-.footer-subscribe input[type="text"] {
+.footer-subscribe input[type="email"] {
     background: white;
     color: #010101;
     padding: 17px 20px 16px;

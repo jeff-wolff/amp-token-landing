@@ -52,9 +52,13 @@ main {
 /* 1. Add the correct box sizing in Firefox. */
 /* 2. Show the overflow in Edge and IE. */
 hr {
-  box-sizing: content-box;  /* 1. */
+  width: 100%;              /* 1. */
   height: 0;                /* 1. */
   overflow: visible;        /* 2. */
+  border: 1px solid;
+  border-color: #ccc;
+  border-width: 1px 0 0 0;
+  margin: 1rem 0;
 }
 
 /* 1. Correct the inheritance and scaling of font size in all browsers. */
@@ -70,6 +74,29 @@ pre {
 |--------------------------------------------------------------------------
 */
 
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .25rem;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.17em;
+}
+h4 {
+  font-size: 1.075em;
+}
+h5 {
+  font-size: .95em;
+}
+h6 {
+  font-size: .75em;
+}
+
 /* Remove the grey background on active links in IE 10. */
 a {
   display: inline-block;
@@ -79,45 +106,30 @@ a {
 p {
   font-style: normal;
   font-weight: normal;
-  margin: 0 0 1.2rem;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  margin: 0 0 .75rem;
-}
-
-/* 1. Remove the bottom border in Chrome 57- */
-/* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
-abbr[title] {
-  border-bottom: none;                /* 1. */
-  text-decoration: underline;         /* 2. */
-  text-decoration: underline dotted;  /* 2. */
+  margin: 0 0 1.5rem;
 }
 
 /* Add the correct font weight in Chrome, Edge, and Safari. */
-b,
-strong {
+b, strong {
   font-weight: bolder;
 }
 
-/* 1. Correct the inheritance and scaling of font size in all browsers. */
-/* 2. Correct the odd `em` font sizing in all browsers. */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;  /* 1. */
-  font-size: 1em;                     /* 2. */
+/* Lists */
+ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Add the correct font size in all browsers. */
 small {
   font-size: 80%;
+  font-size: smaller;
 }
 
 /* Prevent `sub` and `sup` elements from affecting the line height in */
 /* all browsers. */
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -132,21 +144,78 @@ sup {
   top: -0.5em;
 }
 
+/* 1. Remove the bottom border in Chrome 57- */
+/* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+abbr[title] {
+  border-bottom: none;                /* 1. */
+  text-decoration-style: underline;         /* 2. */
+  text-decoration-style: dotted;      /* 2. */
+}
+
+/* 1. Correct the inheritance and scaling of font size in all browsers. */
+/* 2. Correct the odd `em` font sizing in all browsers. */
+code, kbd, samp {
+  font-family: monospace,;  /* 1. */
+  font-size: 1em;                     /* 2. */
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  line-height: 1;
+  padding: 3px 5px;
+  white-space: nowrap;
+}
+
+var {
+  font-weight: bolder;
+}
+
+blockquote, figure, dl {
+  margin: 1rem 0;
+}
+
+figure > img {
+  margin: 0 0 1rem;
+}
+
+figcaption {
+  font-size: smaller;
+}
+
+dl {
+  
+}
+dt, dd {
+
+}
+
+
 /*
 |--------------------------------------------------------------------------
 |  Embedded content
 |--------------------------------------------------------------------------
 */
 
-/* Remove the border on images inside links in IE 10. */
-/* Set max-width to 100% for responsive images */
+iframe {
+  border: 0;
+}
+
+/* 1. Remove the border on images inside links in IE 10. */
+/* 2. Set max-width to 100% for responsive images */
+/* 3. Center images by default */
 img {
-  border-style: none;
-  max-width: 100%;
+  border-style: none; /* 1. */
+  max-width: 100%; /* 2. */
   display: block;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto; /* 3. */
+  margin-right: auto; /* 3. */
 }
 
 /*
@@ -157,28 +226,18 @@ img {
 
 /* 1. Change the font styles in all browsers. */
 /* 2. Remove the margin in Firefox and Safari. */
-button,
-input,
-optgroup,
-select,
-textarea {
+/* 3. Remove default border-radius on iPhone */
+button, input, optgroup, select, textarea {
   font-family: inherit; /* 1. */
   font-size: 100%;      /* 1. */
-  line-height: 1;    /* 1. */
+  line-height: 1;       /* 1. */
   margin: 0;            /* 2. */
-}
-
-input,
-textarea,
-select,
-button {
+  border-radius: 0;     /* 3. */
   background: none;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   font-size: 1rem;
   padding: 0.84rem 0.9375rem 0.7rem;
-  border-radius: 0; /* Old versions of iPhone set default radius */
 }
-
 
 /* Show the overflow in IE and Edge. */
 button,
@@ -220,7 +279,9 @@ button:-moz-focusring,
 
 /* Correct the padding in Firefox. */
 fieldset {
+  margin: 1rem 0;
   padding: 0.35em 0.75em 0.625em;
+  border: 1px solid #ccc;
 }
 
 /* 1. Correct the text wrapping in Edge and IE. */
@@ -279,6 +340,7 @@ textarea {
   font: inherit;              /* 2. */
 }
 
+
 /*
 |--------------------------------------------------------------------------
 |  Interactive
@@ -295,29 +357,13 @@ summary {
   display: list-item;
 }
 
+
 /*
 |--------------------------------------------------------------------------
 |  Misc
 |--------------------------------------------------------------------------
 */
 
-/* Lists */
-ol, ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-/* Add the correct display in IE 10+. */
-template {
-  display: none;
-}
-
-/* Add the correct display in IE 10. */
-[hidden] {
-  display: none;
-}
 
 /* Tables */
 table {
@@ -328,16 +374,12 @@ th {
   text-align: left;
 }
 
-dt, dd {
-  margin: 0;
-  padding: 0;
+/* Add the correct display in IE 10+. */
+template {
+  display: none;
 }
 
-blockquote,
-figure {
-  margin: 0;
-}
-
+/* Add the correct display in IE 10. */
 [hidden] {
   display: none;
 }
