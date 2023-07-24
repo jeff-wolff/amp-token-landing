@@ -731,7 +731,8 @@ footer .logo {
 @keyframes breathe {
     0% {
         opacity: 0;
-        transform: translateX(-60px) translateY(60px) scale(1.2);
+        filter: blur(3px);
+        transform: translateX(-60px) translateY(60px) scale(1.05);
     }
     30% {
         opacity: 1;
@@ -740,6 +741,7 @@ footer .logo {
         transform: translateY(0) translateX(0) scale(1);
     }
     100%  {
+        filter: blur(0px);
         transform: translateY(0) translateX(0) scale(1);
     }
 }
@@ -767,11 +769,11 @@ footer .logo {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(24px);
+        /* transform: translateY(32px); */
     }
     100% {
         opacity: 1;
-        transform: translateY(24px);
+        transform: translateY(21px);
     }
 }
 @keyframes hover {
@@ -789,15 +791,15 @@ footer .logo {
 }
 .a-fadein {
     opacity: 0;
-    animation: 1s fadein .1s forwards;
+    animation: 1s fadein .25s forwards;
 }
 .a-fadein-2 {
     opacity: 0;
-    animation: 1s fadein 1s forwards;
+    animation: 1s fadein .25s forwards;
 }
 .a-fadein-3 {
     opacity: 0;
-    animation: 1s fadein 1.1s forwards;
+    animation: 1s fadein .28s forwards;
 }
 
 .a-fadein-4 {
@@ -816,7 +818,7 @@ footer .logo {
 
 .a-hover {
     opacity: 0;
-    animation: 4s hover 1.5s forwards;
+    animation: 4s hover 3s forwards;
 }
 
 .a-1 {
