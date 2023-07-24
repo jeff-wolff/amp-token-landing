@@ -795,21 +795,21 @@ footer .logo {
 }
 .a-fadein-2 {
     opacity: 0;
-    animation: 1s fadein .45s forwards;
+    animation: 1s fadein 1.566s forwards;
 }
 .a-fadein-3 {
     opacity: 0;
-    animation: 1s fadein .68s forwards;
+    animation: 1s fadein 1.666s forwards;
 }
 
 .a-fadein-4 {
     opacity: 0;
-    animation: 1s fadein 1.333s forwards;
+    animation: 1s fadein 1.999s forwards;
 }
 
 .a-fadein-5 {
     opacity: 0;
-    animation: 1s fadein 1.666s forwards;
+    animation: 1s fadein 2.333s forwards;
 }
 
 .a-zoom {
