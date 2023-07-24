@@ -370,7 +370,7 @@ header .social-nav {
     margin-bottom: 21px;
 }
 .mast .subtitle {
-    text-shadow: 1px 1px 0 black;
+    /* text-shadow: 2px 1px 0 black; */
     margin-bottom: 0;
 }
 
