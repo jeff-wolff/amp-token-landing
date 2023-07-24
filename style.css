@@ -804,12 +804,12 @@ footer .logo {
 
 .a-fadein-4 {
     opacity: 0;
-    animation: 1s fadein 2s forwards;
+    animation: 1s fadein 1s forwards;
 }
 
 .a-fadein-5 {
     opacity: 0;
-    animation: 1s fadein 2.666s forwards;
+    animation: 1s fadein 1.666s forwards;
 }
 
 .a-zoom {
