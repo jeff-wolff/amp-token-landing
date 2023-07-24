@@ -619,7 +619,7 @@ footer .footer__right {
     height: 100%;
     position: absolute;
     top: 0;
-    right: -9px;
+    right: -12px;
     display: block;
     transform: skewX(-20deg);
 }
@@ -631,7 +631,7 @@ footer .footer__right {
     min-width: 240px;
     width: 100%;
     outline: none;
-
+    height: 57px;
     
 }
 @media (min-width: 768px) {
@@ -681,7 +681,7 @@ footer .footer__right {
     height: 100%;
     position: absolute;
     top: 3px;
-    left: -12px;
+    left: -10px;
     display: block;
     transform: skewX(-20deg);
 }

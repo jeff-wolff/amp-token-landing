@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta name="generator" content="HTML Tidy for HTML5 for Apple macOS version 5.8.0">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kitchen Sink</title>
-        <link rel="stylesheet" href="reset.css">
-        <!-- <link rel="stylesheet" href="style.css"> -->
+        <title>HTML Kitchen Sink</title>
+
+        <link rel="stylesheet" href="__omni.css">
+
         <style>
-            form > div > label {
-            display: block;
-            margin-top: 1.5rem;
-            }
-            .container {
-            max-width: 1280px;
-            margin-left: auto;
-            margin-right: auto;
+            form > div {                
+                margin-bottom: 1.5rem;
             }
         </style>
     </head>
@@ -26,19 +20,21 @@
             -->
         <main>
             <section class="container">
-                <h1>The HTML Kitchen Sink</h1>
+                <h1>Kitchen Sink</h1>
+                <p><em><q>Everything but the kitchen sink</q> – include almost everything imaginable, leaving out only the most irrelevant elements.</em></p>
+                
                 <div style="display:flex;flex-wrap:wrap;">
                     <a style="margin-right: 10px;" href="#heading">Heading Content</a><br>
-                    <a style="margin-left: 10px;margin-right: 10px;" href="#palpable">Palpable Content</a><br>
-                    <a style="margin-left: 10px;margin-right: 10px;" href="#phrasing">Phrasing Content</a><br>
-                    <a style="margin-left: 10px;margin-right: 10px;" href="#embedded">Embedded Content</a><br>
-                    <a style="margin-left: 10px;margin-right: 10px;" href="#interactive">Interactive Content</a><br>
-                    <a style="margin-left: 10px;margin-right: 10px;" href="#sectioning">Sectioning Content</a>
+                    <a style="margin-right: 10px;" href="#flow">Flow Content</a><br>
+                    <a style="margin-right: 10px;" href="#phrasing">Phrasing Content</a><br>
+                    <a style="margin-right: 10px;" href="#embedded">Embedded Content</a><br>
+                    <a style="margin-right: 10px;" href="#interactive">Interactive Content</a><br>
+                    <a style="" href="#sectioning">Sectioning Content</a>
                 </div>
             </section>
             <hr>
             <section class="container">
-                <h1 id="heading">Heading Content</h1>
+                <h2 id="heading">Heading Content</h2>
                 <hgroup>
                     <h1>h1 I am most important.</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsam doloribus nam aut ipsum expedita illum nobis temporibus, id est fugiat illo, quos natus deserunt quo sequi nisi delectus repellendus maxime eius tempora! Culpa adipisci suscipit quod reprehenderit.</p>
@@ -58,21 +54,22 @@
             </section>
             <hr>
             <section class="container">
-                <h1 id="palpable">Palpable Content</h1>
+                <h2 id="flow">Flow Content</h2>
 
                 <p><code>a</code>:<br> <a href="http://example.com">Example</a>.</p>
 
                 <p><code>p</code>:</p>
                 <p>This is a paragraph element. It contains many different, sometimes useful, <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML5 elements</a>. Of course there are classics like <em>emphasis</em>, <strong>strong</strong>, and <small>small</small> but there are many others as well. Hover the following text for abbreviation element: <abbr title="abbreviation">abbr</abbr>. You can define <del>deleted text</del> which often gets replaced with <ins>inserted</ins> text.</p>
-                <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> or <samp>samp</samp> elements. Even more specifically, there is an element just for <var>variables</var>. Not to be mistaken with blockquotes below, the quote element lets you denote something as <q>quoted text</q>. Lastly don't forget the sub (H<sub>2</sub>O) and sup (E = MC<sup>2</sup>) elements.</p>
+                <p>You can also use <kbd>keyboard text</kbd>, which sometimes is styled similarly to the <code>&lt;code&gt;</code> element.</p>
 
-                <p><code>address</code>:</p>
-                <p><address>1 Infinite Loop<br>Cupertino, CA 95014<br>United States</address></p>
+                <!-- <p><code>address</code>:</p>
+                <p><address>1 Infinite Loop<br>Cupertino, CA 95014<br>United States</address></p> -->
 
                 <p><code>blockquote</code>:</p>
-                <blockquote><p>I quickly explained that many big jobs involve few hazards</p></blockquote>
+                <blockquote><p>“I quickly explained that many big jobs involve few hazards”</p></blockquote>
                 <blockquote>
-                    <p>This is a mult-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.</p>
+                    <p>”This is a multi-line blockquote with a cite reference. People think focus means saying yes to the thing you’ve got to focus on. But that’s not what it means at all.</p>
+                    <p>It means saying no to the hundred other good ideas that there are. You have to pick carefully. I’m actually as proud of the things we haven’t done as the things I have done. Innovation is saying no to 1,000 things.“</p>
                     <cite>–Steve Jobs, Apple Worldwide Developers’ Conference, 1997</cite>
                 </blockquote>
 
@@ -81,14 +78,15 @@
                     <img src="https://picsum.photos/1024/504/?grayscale">
                     <figcaption>Figure 1: A picture of XXX</figcaption>
                 </figure>
-
                 <p><code>form</code>:</p>
                 <form>
                     <div>
-                        <label for="example-input-text">Text</label> <input type="text" id="example-input-text">
+                        <label for="example-input-text">Text</label><br>
+                        <input type="text" id="example-input-text">
+                        <input type="submit" name="submit" value="Input Submit">
                     </div>
                     <div>
-                        <label for="example-textarea">Textarea</label>
+                        <label for="example-textarea">Textarea</label><br>
                         <textarea id="example-textarea" rows="3"></textarea>
                     </div>
                     <div style="margin: 1.5rem 0;">
@@ -96,31 +94,31 @@
                         <button disabled>Disabled</button>
                     </div>
                     <div>
-                        <label for="example-input-file">File input</label> <input type="file" id="example-input-file">
+                        <label for="example-input-file">File input</label><br> <input type="file" id="example-input-file">
                     </div>
                     <div>
-                        <label for="example-input-email">Email address</label>
+                        <label for="example-input-email">Email address</label><br>
                         <input type="email" id="example-input-email">
                     </div>
                     <div>
-                        <label for="example-input-password">Password</label>
+                        <label for="example-input-password">Password</label><br>
                         <input type="password" id="example-input-password">
                     </div>
                     <div>
-                        <label for="example-input-url">URL</label> <input type="url" id="example-input-url">
+                        <label for="example-input-url">URL</label><br> <input type="url" id="example-input-url">
                     </div>
                     <div>
-                        <label for="example-input-search">Search</label> <input type="search" id="example-input-search">
+                        <label for="example-input-search">Search</label><br> <input type="search" id="example-input-search">
                     </div>
                     <div>
-                        <label for="example-input-tel">Telephone number</label>
+                        <label for="example-input-tel">Telephone number</label><br>
                         <input type="tel" id="example-input-tel">
                     </div>
                     <div>
-                        <label for="example-input-number">Number</label> <input type="number" id="example-input-number">
+                        <label for="example-input-number">Number</label><br> <input type="number" id="example-input-number">
                     </div>
                     <div>
-                        <label for="example-select1">Select</label> 
+                        <label for="example-select1">Select</label><br> 
                         <select id="example-select1">
                             <option>1</option>
                             <option>2</option>
@@ -131,7 +129,7 @@
                     </div>
                     <div>
                         <label for="example-optgroup">Select with optgroup: Favorite
-                        Car</label> 
+                        Car</label><br> 
                         <select id="example-optgroup">
                             <optgroup label="Swedish Cars">
                                 <option>Volvo</option>
@@ -144,41 +142,42 @@
                         </select>
                     </div>
                     <div>
-                        <label for="example-input-date">Date</label> <input type="date" id="example-input-date">
+                        <label for="example-input-date">Date</label><br> <input type="date" id="example-input-date">
+                    </div>
+                    <div>
+                        <label for="example-input-time">Time</label><br> <input type="time" id="example-input-time">
                     </div>
                     <!-- <div>
-                        <label for="example-input-date-time">Date / Time</label>
+                        <label for="example-input-date-time">Date / Time</label><br>
                         <input type="datetime" id="example-input-date-time">
                         </div> -->
                     <div>
                         <label for="example-input-date-time-local">Date / Time
-                        local</label> <input type="datetime-local" id="example-input-date-time-local">
+                        local</label><br> <input type="datetime-local" id="example-input-date-time-local">
+                    </div>
+                    <!-- <div>
+                        <label for="example-input-month">Month</label><br> <input type="month" id="example-input-month">
                     </div>
                     <div>
-                        <label for="example-input-month">Month</label> <input type="month" id="example-input-month">
+                        <label for="example-input-week">Week</label><br> <input type="week" id="example-input-week">
+                    </div> -->
+                    
+                    <div>
+                        <label for="example-input-color">Color</label><br> <input type="color" id="example-input-color">
                     </div>
                     <div>
-                        <label for="example-input-week">Week</label> <input type="week" id="example-input-week">
-                    </div>
-                    <div>
-                        <label for="example-input-time">Time</label> <input type="time" id="example-input-time">
-                    </div>
-                    <div>
-                        <label for="example-input-color">Color</label> <input type="color" id="example-input-color">
-                    </div>
-                    <div>
-                        <label for="example-input-readonly">Read-only</label>
+                        <label for="example-input-readonly">Read-only</label><br>
                         <input type="text" readonly value="Can't touch this!">
                     </div>
                     <div>
-                        <label for="example-input-disabled">Disabled</label>
+                        <label for="example-input-disabled">Disabled</label><br>
                         <input type="text" disabled value="Not available">
                     </div>
                     <div>
-                        <label for="example-input-range">Range input</label>
+                        <label for="example-input-range">Range input</label><br>
                         <input type="range" id="example-input-range" min="1" max="4" value="3">
                     </div>
-                    <div>
+                    <!-- <div>
                         <label for="example-select2">Multiple select</label>
                         <select multiple id="example-select2">
                             <option>1</option>
@@ -188,7 +187,7 @@
                             <option>5</option>
                         </select>
                     </div>
-                    <!-- <div>
+                    <div>
                         <label for="example-optgroup3">Multiple select with optgroup:
                         Public transport</label> 
                         <select id="example-optgroup3" multiple>
@@ -220,132 +219,10 @@
                     </fieldset>
                     <fieldset>
                         <legend>I am also legend</legend>
-                        <input type="checkbox" id="checkbox1"> <label for="checkbox1">Check me out</label>
-                        <input type="checkbox" id="checkbox2"> <label for="checkbox2">and/or check me out</label>
+                        <div><input type="checkbox" id="checkbox1"> <label for="checkbox1">Check me out</label></div>
+                        <div><input type="checkbox" id="checkbox2"> <label for="checkbox2">and/or check me out</label></div>
                     </fieldset>
-                </form>
-                <hr>
-                <p><code>pre</code>:</p>
-                <pre>
-    pre {
-        display: block;
-        padding: 7px;
-        background-color: #F5F5F5;
-        border: 1px solid #E1E1E8;
-        border-radius: 3px;
-        white-space: pre-wrap;
-        word-break: break-all;
-        font-family: Menlo, Monaco;
-        line-height: 160%;
-    }</pre>
-                <hr>
-                <p><code>table</code>:</p>
-                <table>
-                    <caption>Tables can have captions now.</caption>
-                    <tbody>
-                        <tr>
-                            <th>Person</th>
-                            <th>Number</th>
-                            <th>Third Column</th>
-                        </tr>
-                        <tr>
-                            <td>Someone Lastname</td>
-                            <td>900</td>
-                            <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
-                        </tr>
-                        <tr>
-                            <td>Name</td>
-                            <td>1200</td>
-                            <td>Vestibulum id ligula porta felis euismod semper. Donec
-                                ullamcorper nulla non metus auctor fringilla.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Another Person</td>
-                            <td>1500</td>
-                            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-                                auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Last One</td>
-                            <td>2800</td>
-                            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                                Cras mattis consectetur purus sit amet fermentum.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr>
-                <p id="table-summary">In the following table, characteristics are
-                    given in the second column, with the negative side in the left
-                    column and the positive side in the right column.
-                </p>
-                <table aria-describedby="table-summary">
-                    <caption>Characteristics with positive and negative sides</caption>
-                    <thead>
-                        <tr>
-                            <th>Negative</th>
-                            <th>Characteristic</th>
-                            <th>Positive</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sad</td>
-                            <th>Mood</th>
-                            <td>Happy</td>
-                        </tr>
-                        <tr>
-                            <td>Failing</td>
-                            <th>Grade</th>
-                            <td>Passing</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table>
-                    <caption>Complex table with a <code>thead</code>, multiple
-                        <code>tbody</code> elements, and a <code>tfoot</code>.
-                    </caption>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>2008</th>
-                            <th>2007</th>
-                            <th>2006</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Net sales</th>
-                            <td>$32,479</td>
-                            <td>$24,006</td>
-                            <td>$19,315</td>
-                        </tr>
-                        <tr>
-                            <th>Cost of sales</th>
-                            <td>21,334</td>
-                            <td>15,852</td>
-                            <td>13,717</td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th>Gross margin</th>
-                            <td>$11,145</td>
-                            <td>$8,154</td>
-                            <td>$5,598</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Gross margin percentage</th>
-                            <td>34.3%</td>
-                            <td>34.0%</td>
-                            <td>29.0%</td>
-                        </tr>
-                    </tfoot>
-                </table>
+                </form> 
                 <hr>
                 <p><code>ul</code>:</p>
                 <ul>
@@ -410,43 +287,377 @@
                     <dd>Defines a section that is quoted from another source</dd>
                 </dl>
                 <hr>
-                <p><strong>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#palpable-content">Palpable
-                    Content spec.</a></strong>
+                <p><code>pre</code>:</p>
+                <pre>
+    pre {
+        display: block;
+        padding: 7px;
+        background-color: #F5F5F5;
+        border: 1px solid #E1E1E8;
+        border-radius: 3px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        font-family: Menlo, Monaco;
+        line-height: 160%;
+    }</pre>
+                <hr>
+                <p><code>table</code>:</p>
+                <table>
+                    <caption>Tables can have captions now.</caption>
+                    <tbody>
+                        <tr>
+                            <th>Person</th>
+                            <th>Number</th>
+                            <th>Third Column</th>
+                        </tr>
+                        <tr>
+                            <td>Someone Lastname</td>
+                            <td>900</td>
+                            <td>Nullam quis risus eget urna mollis ornare vel eu leo.</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>1200</td>
+                            <td>Vestibulum id ligula porta felis euismod semper. Donec
+                                ullamcorper nulla non metus auctor fringilla.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Another Person</td>
+                            <td>1500</td>
+                            <td>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+                                auctor. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Last One</td>
+                            <td>2800</td>
+                            <td>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                                Cras mattis consectetur purus sit amet fermentum.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <h3 id="table-summary">The following are styled with a .rte class:</h3>
+                <div class="rte">
+                    <br><p><code>ul</code>:</p>
+                    <ul>
+                        <li>
+                            <strong>Unordered List item one</strong>
+                            <ul>
+                                <li>
+                                    Nested list item
+                                    <ul>
+                                        <li>Level 3, item one</li>
+                                        <li>Level 3, item two</li>
+                                        <li>Level 3, item three</li>
+                                        <li>Level 3, item four</li>
+                                    </ul>
+                                </li>
+                                <li>List item two</li>
+                                <li>List item three</li>
+                                <li>List item four</li>
+                            </ul>
+                        </li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                        <li>List item four</li>
+                    </ul><br><br>
+                    <p><code>ol</code>:</p>
+                    <ol>
+                        <li>
+                            <strong>Ordered List item one</strong>
+                            <ol>
+                                <li>
+                                    Nested List item
+                                    <ol>
+                                        <li>Level 3, item one</li>
+                                        <li>Level 3, item two</li>
+                                        <li>Level 3, item three</li>
+                                        <li>Level 3, item four</li>
+                                    </ol>
+                                </li>
+                                <li>List item two</li>
+                                <li>List item three</li>
+                                <li>List item four</li>
+                            </ol>
+                        </li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                        <li>List item four</li>
+                    </ol><br><br>
+                    <p><code>dl</code>:</p>
+                    <dl>
+                        <dt>Definition List Title</dt>
+                        <dd>Definition list division.</dd>
+                        <dt>Kitchen Sink</dt>
+                        <dd>Used in expressions to describe work in which all conceivable
+                            (and some inconceivable) sources have been mined. In this case, a
+                            bunch of markup.
+                        </dd>
+                        <dt>aside</dt>
+                        <dd>Defines content aside from the page content</dd>
+                        <dt>blockquote</dt>
+                        <dd>Defines a section that is quoted from another source</dd>
+                    </dl>
+                    <hr>
+                    <table>
+                        <caption>Characteristics with positive and negative sides</caption>
+                        <thead>
+                            <tr>                                
+                                <th>Characteristic</th>
+                                <th>Grade</th>
+                                <th>Mood</th>
+                                
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Positive</td>
+                                <td>Passing</td>
+                                <td>Happy</td>
+                            </tr>
+                            <tr>
+                                <td>Negative</td>
+                                <td>Failing</td>
+                                <td>Sad</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <caption>Complex table with a <code>thead</code>, multiple
+                            <code>tbody</code> elements, and a <code>tfoot</code>.
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>2006</th>
+                                <th>2007</th>
+                                <th>2008</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Net sales</th>
+                                <td>$19,315</td>
+                                <td>$24,006</td>
+                                <td>$32,479</td>
+                            </tr>
+                            <tr>
+                                <th>Cost of sales</th>
+                                <td>$21,334</td>
+                                <td>$15,852</td>
+                                <td>$13,717</td>
+                            </tr>
+                            <tr>
+                                <th>Gross margin</th>
+                                <td>$11,145</td>
+                                <td>$8,154</td>
+                                <td>$5,598</td>
+                            </tr>
+                            <tr>
+                                <th>Gross margin percentage</th>
+                                <td>34.3%</td>
+                                <td>34.0%</td>
+                                <td>29.0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><code>form</code>:</p>
+                <form>
+                    <div>
+                        <label for="example-input-text">Text</label><br>
+                        <input type="text" id="example-input-text">
+                        <input type="submit" name="submit" value="Input Submit">
+                    </div>
+                    <div>
+                        <label for="example-textarea">Textarea</label><br>
+                        <textarea id="example-textarea" rows="3"></textarea>
+                    </div>
+                    <div style="margin: 1.5rem 0;">
+                        <button>Button</button> <input type="submit" name="submit" value="Input Submit"> <button type="submit" name="submit2">Button Submit</button> <input type="reset" name="reset" value="Input Reset"> <button type="reset" name="reset2">Button Reset</button>
+                        <button disabled>Disabled</button>
+                    </div>
+                    <div>
+                        <label for="example-input-file">File input</label><br> <input type="file" id="example-input-file">
+                    </div>
+                    <div>
+                        <label for="example-input-email">Email address</label><br>
+                        <input type="email" id="example-input-email">
+                    </div>
+                    <div>
+                        <label for="example-input-password">Password</label><br>
+                        <input type="password" id="example-input-password">
+                    </div>
+                    <div>
+                        <label for="example-input-url">URL</label><br> <input type="url" id="example-input-url">
+                    </div>
+                    <div>
+                        <label for="example-input-search">Search</label><br> <input type="search" id="example-input-search">
+                    </div>
+                    <div>
+                        <label for="example-input-tel">Telephone number</label><br>
+                        <input type="tel" id="example-input-tel">
+                    </div>
+                    <div>
+                        <label for="example-input-number">Number</label><br> <input type="number" id="example-input-number">
+                    </div>
+                    <div>
+                        <label for="example-select1">Select</label><br> 
+                        <select id="example-select1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="example-optgroup">Select with optgroup: Favorite
+                        Car</label><br> 
+                        <select id="example-optgroup">
+                            <optgroup label="Swedish Cars">
+                                <option>Volvo</option>
+                                <option>Saab</option>
+                            </optgroup>
+                            <optgroup label="German Cars">
+                                <option>Mercedes</option>
+                                <option>Audi</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="example-input-date">Date</label><br> <input type="date" id="example-input-date">
+                    </div>
+                    <div>
+                        <label for="example-input-time">Time</label><br> <input type="time" id="example-input-time">
+                    </div>
+                    <!-- <div>
+                        <label for="example-input-date-time">Date / Time</label><br>
+                        <input type="datetime" id="example-input-date-time">
+                        </div> -->
+                    <div>
+                        <label for="example-input-date-time-local">Date / Time
+                        local</label><br> <input type="datetime-local" id="example-input-date-time-local">
+                    </div>
+                    <!-- <div>
+                        <label for="example-input-month">Month</label><br> <input type="month" id="example-input-month">
+                    </div>
+                    <div>
+                        <label for="example-input-week">Week</label><br> <input type="week" id="example-input-week">
+                    </div> -->
+                    
+                    <div>
+                        <label for="example-input-color">Color</label><br> <input type="color" id="example-input-color">
+                    </div>
+                    <div>
+                        <label for="example-input-readonly">Read-only</label><br>
+                        <input type="text" readonly value="Can't touch this!">
+                    </div>
+                    <div>
+                        <label for="example-input-disabled">Disabled</label><br>
+                        <input type="text" disabled value="Not available">
+                    </div>
+                    <div>
+                        <label for="example-input-range">Range input</label><br>
+                        <input type="range" id="example-input-range" min="1" max="4" value="3">
+                    </div>
+                    <!-- <div>
+                        <label for="example-select2">Multiple select</label>
+                        <select multiple id="example-select2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="example-optgroup3">Multiple select with optgroup:
+                        Public transport</label> 
+                        <select id="example-optgroup3" multiple>
+                            <optgroup label="Ground">
+                                <option>Train</option>
+                                <option>Bus</option>
+                            </optgroup>
+                            <optgroup label="Water">
+                                <option>Ship</option>
+                                <option>Submarine</option>
+                            </optgroup>
+                            <optgroup label="Air">
+                                <option>Plane</option>
+                                <option>Balloon</option>
+                            </optgroup>
+                        </select>
+                    </div> -->
+                    <fieldset>
+                        <legend>I am legend</legend>
+                        <div><input type="radio" name="option-radio" id="option-radio1" value="option1" checked> <label for="option-radio1">Option one is
+                            this and that—be sure to include why it's great</label>
+                        </div>
+                        <div><input type="radio" name="option-radio" id="option-radio2" value="option2"> <label>Option two can be something else and
+                            selecting it will deselect option one</label>
+                        </div>
+                        <div><input type="radio" name="option-radio" id="option-radio3" value="option3" disabled> <label>Option three is
+                            disabled</label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>I am also legend</legend>
+                        <div><input type="checkbox" id="checkbox1"> <label for="checkbox1">Check me out</label></div>
+                        <div><input type="checkbox" id="checkbox2"> <label for="checkbox2">and/or check me out</label></div>
+                    </fieldset>
+                </form> 
+                <hr>
+                <p><strong>See the <a target="_blank" href="https://www.w3.org/TR/html5/dom.html#flow-content">Flow Content spec.</a></strong>
                 </p>
             </section>
             <hr>
             <section class="container">
-                <h1 id="phrasing">Phrasing Content</h1>
-                <p><code>abbr</code>:<br> Some vehicles meet the <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr> standard.</p>
-                <p><code>b</code> which is used to <b>draw attention</b> without the semantic meaning of importance.</p>
+                <h2 id="phrasing">Phrasing Content</h2>
+
+                <p>                    
+                    <code>small</code> is used for side comments: <q>I wrote this whole document. <small>[Editor's note: no he did not]</small></q><br>                
+                    <code>sub</code> is used for subscripts: H<sub>2</sub>O.<br>            
+                    <code>sup</code> is used for superscripts: E = MC<sup>2</sup>.
                 </p>
-                <!-- <p><code>bdi</code>:<br> Some languages read right to left, <bdi lang="ar">مرحبا</bdi>.<br><br><code>bdo</code>:<br> <bdo dir="rtl">The normal direction has been overridden.</bdo></p> -->
-                <p><code>cite</code>:<br> In the words of <cite>Charles Bukowski</cite> — <q>An intellectual says a simple thing in a hard way. An artist says a hard thing in a simple way.</q></p>
-                <!-- <p><code>dfn</code>:<br> Foreign phrases add a certain <dfn lang="fr" title="French: indefinable quality">je ne sais quoi</dfn> to one's prose.</p> -->
-                <p><code>del</code> can be <del datetime="2017-10-11T01:25-07:00">varily</del> used to mark deletions.</p>
-                <code>em</code> is used for <em>emphasis</em> and usually renders as italics, contrast that with<br><br>
-                <code>i</code> which is used for alternate voice or to offset from the normal (such as a phrase from a different language or taxonomic designation): <i>E. coli</i> can be bad<br><br>
-                <code>ins</code> marks <ins datetime="2007-12-19 00:00Z">insertions</ins>.</p>
-                <p><code>kbd</code>:<br><pre><samp>c:\&gt; <kbd>format c: /yes</kbd></samp></pre><br>Is it bad? Press <kbd>Ctrl + F5</kbd> or <kbd>Cmd + Shift + R</kbd> for a hard reload.</p>
-                <p><code>mark</code>:<br> the HTML equivalent of the <mark>yellow highlighter</mark>.</p>
-                <p><code>meter</code>:<br><label><small>Meter:</small></label> <meter value="6" max="8">6 blocks used (out of 8 total)</meter></p>
-                <p><code>output</code>:</p><form onsubmit="return false" oninput="o.value= a.valueAsNumber + b.valueAsNumber"><input name="a" type="number" step="any"> + <input name="b" type="number" step="any"> = <output name="o" for="a b"></output></form><br>
-                <p>
-                    <code>progress</code>:<br>
-                    <label><small>Progress:</small></label> <progress value="37" max="100">37%</progress>
-                </p>
+
+                <p><code>strong</code> is used for <strong>importance or urgency</strong> and usually renders as bold.<br><code>b</code> is the <b>older</b> version of this.</p>
+
+                <p><code>em</code> is used for <em>emphasis</em> and usually renders as italics, which is used interchangeably with<br>
+                    <code>i</code>   the old way to italicize something</p>
+
+                <code>ins</code> marks <ins datetime="2023-12-25 00:00Z">insertions</ins>.<br>
+                    <code>u</code>   the old way to <u>underline</u> something</p>
+
+                <p><code>del</code> can be used to <del datetime="2023-10-31T01:25-07:00">mark deletions.</del><br>
+                    <code>s</code> is the older version of <code>del</code>. <s>Windows XP version available.</s></p>
                 <p>
                     <code>q</code>:<br>
                     The W3C page <cite>About W3C</cite> says the W3C’s mission is <q cite="https://www.w3.org/Consortium/">To lead the World Wide Web to its full potential by developing protocolsand guidelines that ensure long-term growth for the Web</q>.
                 </p>
+
+                <p><code>abbr</code>:<br> Some vehicles meet the <abbr title="Super Ultra Low Emission Vehicle">SULEV</abbr> standard.</p>
+                
+                <!-- <p><code>bdi</code>:<br> Some languages read right to left, <bdi lang="ar">مرحبا</bdi>.<br><br><code>bdo</code>:<br> <bdo dir="rtl">The normal direction has been overridden.</bdo></p> -->
+                <p><code>cite</code>:<br> In the words of <cite>Charles Bukowski</cite> — <q>An intellectual says a simple thing in a hard way. An artist says a hard thing in a simple way.</q></p>
+                <!-- <p><code>dfn</code>:<br> Foreign phrases add a certain <dfn lang="fr" title="French: indefinable quality">je ne sais quoi</dfn> to one's prose.</p> -->
+                
+                <p><code>kbd</code>:<br><pre>c:\&gt; <kbd>format c: /yes</kbd></pre>Is it bad? Press <kbd>Ctrl + F5</kbd> or <kbd>Cmd + Shift + R</kbd> for a hard reload.</p>
+                <p><code>mark</code>:<br> the HTML equivalent of the <mark>yellow highlighter</mark>.</p>                
+                <!-- <p><code>output</code>:</p><form onsubmit="return false" oninput="o.value= a.valueAsNumber + b.valueAsNumber"><input name="a" type="number" step="any"> + <input name="b" type="number" step="any"> = <output name="o" for="a b"></output></form><br> -->
                 <p>
-                    <code>s</code> is similar to <code>del</code>, but used to mark content that is no longer relevant. <s>Windows XP version available.</s><br><br>
-                    <code>small</code> is used for side comments: <q>I wrote this whole document. <small>[Editor's note: no he did not]</small></q><br><br>
-                    <code>strong</code> is used for <strong>importance or urgency</strong> and usually renders as bold.<br><br>
-                    <code>sub</code> is used for subscripts: H<sub>2</sub>O.<br><br>                
-                    <code>sup</code> is used for superscripts: E = MC<sup>2</sup>.<br><br>
-                    <code>u</code> is similar to <code>ins</code>, but is a holdover with no real meaning and should be <u>removed</u>.
+                    <code>meter</code>:<br>
+                    <meter value="6" max="8"></meter>
                 </p>
+                <p>
+                    <code>progress</code>:<br>
+                    <progress value="37" max="100"></progress>
+                </p>
+
                 <p>
                     <code>var</code>:<br>To log in, type <kbd>ssh <var>user</var></kbd>, where <var>user</var> is your user ID.
                 </p>
@@ -455,12 +666,12 @@
             </section>
             <hr>
             <section class="container">
-                <h1 id="embedded">Embedded Content</h1>
+                <h2 id="embedded">Embedded Content</h2>
                 <p>Elements <code>audio</code>, <code>canvas</code>, <code>embed</code>, <code>iframe</code>, <code>img</code>, <code>math</code>, <code>object</code>, <code>picture</code>, <code>svg</code>, <code>video</code> make up the <em>embedded content</em> category.</p>
                 <p>
-                    <code>audio</code>:<br><audio controls="" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio><br><br><small>By Cqdx [<a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>], <a href="https://commons.wikimedia.org/wiki/File:What_hath_God_wrought.ogg">from Wikimedia Commons</a>.</small>
+                    <code>audio</code>:<br><audio controls="" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/What_hath_God_wrought.ogg"></audio>
                 </p>
-                <p><code>iframe</code>:<br><iframe srcdoc="&lt;style&gt;body{background: white;}&lt;/style&gt; &lt;h1&gt;Sample Document&lt;/h1&gt;&lt;p&gt;This is a sample content.&lt;/p&gt;"></iframe></p>
+                <p><code>iframe</code>:<br><iframe srcdoc="&lt;style&gt;body{background: black; color:#fff;}&lt;/style&gt; &lt;h1&gt;Sample Document&lt;/h1&gt;&lt;p&gt;This is a sample content.&lt;/p&gt;"></iframe></p>
                 <p><code>img</code>:<br><img src="https://picsum.photos/426/240/?grayscale" alt=""></p>
                 <p>
                     <code>picture</code>:<br><picture><source srcset="https://picsum.photos/852/480/?grayscale 2x, https://picsum.photos/426/240/?grayscale 1x"><img src="https://picsum.photos/426/240/?grayscale" alt=""></picture>
@@ -516,7 +727,7 @@
             </section>
             <hr>
             <section class="container">
-                <h1 id="interactive">Interactive Content</h1>
+                <h2 id="interactive">Interactive Content</h2>
                 <p><code>details</code> and <code>summary</code>:<br></p>
                 <details>
                     <summary>Copying... <progress max="375505392" value="97543282"></progress> 25%</summary>
@@ -531,14 +742,14 @@
                         <dd>320×240</dd>
                     </dl>
                 </details>
-                <hr>
+                <!-- <hr>
                 <p><code>dialog</code>:<br></p>
                 <dialog open>
                     <p>Greetings, one and all!</p>
                     <form method="dialog">
                       <button>OK</button>
                     </form>
-                </dialog>
+                </dialog> -->
                 <hr>
                 <p><strong>See the <a target="_blank" href="https://html.spec.whatwg.org/multipage/dom.html#interactive-content">Interactive
                     Content spec.</a></strong>
@@ -546,7 +757,7 @@
             </section>
             <hr>
             <section class="container">
-                <h1 id="sectioning">Sectioning Content</h1>
+                <h2 id="sectioning">Sectioning Content</h2>
                 <aside><p>This is contained in an <code>aside</code> element.</p></aside>
                 <article><p>This is contained in an <code>article</code> element.</p></article>
                 <nav><p>This is contained in an <code>nav</code> element.</p></nav>
@@ -555,7 +766,7 @@
             </section>
             <hr>
             <section class="container">
-                <p>Find this document on <a href="#">GitHub</a>.<br>Inspiration <a href="https://github.com/dbox/html5-kitchen-sink"><code>dbox/html5-kitchen-sink</code></a></p>
+                <p><strong>This document is on <a href="#">GitHub</a>.</strong><br><small>Inspiration from <a href="https://github.com/dbox/html5-kitchen-sink"><code>dbox/html5-kitchen-sink</code></a></small></p>
             </section>
         </main>
     </body>
