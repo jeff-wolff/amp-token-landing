@@ -557,7 +557,7 @@ footer .social-nav svg {
 
 
 footer .footer__right {
-
+    width: 100%;
 }
 @media (min-width: 768px) {
     footer .footer__right {
@@ -583,9 +583,22 @@ footer .footer__right {
 .footer-subscribe form {
     position: relative;
     width: fit-content;
+    width: 90%;
+}
+@media (min-width: 768px) {
+    .footer-subscribe form {
+        width: fit-content;
+    }
 }
 .subscribe-input {
     position: relative;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+@media (min-width: 768px) {
+    .subscribe-input {
+        margin-left: 0;
+    }
 }
 .subscribe-input::before {
     background: white;
@@ -598,6 +611,7 @@ footer .footer__right {
     display: block;
     transform: skewX(-20deg);
 }
+
 .subscribe-input::after {
     background: white;
     content: " ";
@@ -614,8 +628,25 @@ footer .footer__right {
     background: white;
     color: #010101;
     padding: 17px 20px 16px;
-    min-width: 280px;
+    min-width: 240px;
+    width: 100%;
     outline: none;
+
+    
+}
+@media (min-width: 768px) {
+    .footer-subscribe input[type="email"],
+    .footer-subscribe input[type="text"] {
+
+        min-width: 320px;
+    }
+}
+@media (min-width: 1025px) {
+    .footer-subscribe input[type="email"],
+    .footer-subscribe input[type="text"] {
+
+        min-width: 400px;
+    }
 }
 
 .footer-subscribe input[type="submit"] {
@@ -634,9 +665,14 @@ footer .footer__right {
 .subscribe-submit {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -7px;
     z-index: 2;
     /* z-index: 13; */
+}
+@media (min-width: 768px) {
+    .subscribe-submit {
+        /* right: 0; */
+    }
 }
 .subscribe-submit::before {
     background: black;
