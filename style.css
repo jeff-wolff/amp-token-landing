@@ -54,11 +54,7 @@ a:hover {
     opacity: 0.5;
 }
 
-input,
-textarea,
-select,
-button:not([class]),
-.button {
+input, textarea, select, button:not([class]), .button {
     border: 1px solid #fff;
     color: #fff;
     transition: .125s ease color, .125s ease background-color;
@@ -66,9 +62,7 @@ button:not([class]),
     padding: .5em .6em .4em;
     font-size: 15px;
 }
-.button:hover,
-button:not([class]):hover,
-input[type="submit"]:hover {
+.button:hover, button:not([class]):not([disabled]):hover, input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #fff;
     color: #010101;
 }
@@ -279,7 +273,13 @@ header .social-nav {
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+    animation: 1.6s breathe forwards ease;
+
+    /* opacity: 0; */
+
 }
+
+
 
 .hero > .container {
     width: 100%;
@@ -310,6 +310,9 @@ header .social-nav {
         margin: 0;
     }
 }
+
+
+
 
 .mast {
     margin-top: 70px;
@@ -617,4 +620,93 @@ footer .logo {
         font-size: 13px;
         margin-top: 0;
     }
+}
+
+
+/* animations */
+@keyframes breathe {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(60px);
+    }
+    100%  {
+        transform: translateY(60px);
+    }
+}
+
+@keyframes zoom {
+    0%  {
+        opacity: 0;
+        transform: scale(1) translate3d(0,0,0);
+    }
+    20% {
+        opacity: 1;
+    }
+    50%,100% {
+        opacity: 0.8;
+        transform: scale(1.075)  translate3d(3.5vw,-3.5vw,3.5vw);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(24px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(24px);
+    }
+}
+@keyframes hover {
+    0%,100%  {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(24px);
+    }
+}
+
+
+.a-fadein {
+    opacity: 0;
+    animation: 1s fadein .3s forwards;
+}
+.a-fadein-2 {
+    opacity: 0;
+    animation: 1s fadein .6s forwards;
+}
+.a-fadein-3 {
+    opacity: 0;
+    animation: 1s fadein .7s forwards;
+}
+
+.a-zoom {
+    animation: 1s zoom .7s infinite;
+}
+
+.a-hover {
+    opacity: 0;
+    animation: 4s hover 1.5s forwards;
+}
+
+.a-1 {
+    opacity: 0;
+}
+.a-2 {
+    opacity: 0;
+}
+.a-3 {
+    opacity: 0;
+}
+.a-4 {
+    opacity: 0;
 }

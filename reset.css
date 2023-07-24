@@ -147,16 +147,16 @@ sup {
 /* 1. Remove the bottom border in Chrome 57- */
 /* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
 abbr[title] {
-  border-bottom: none;                /* 1. */
-  text-decoration-style: underline;         /* 2. */
-  text-decoration-style: dotted;      /* 2. */
+  border-bottom: none;                            /* 1. */
+  -webkit-text-decoration: underline dotted;      /* 2. */
+  text-decoration: underline dotted;              /* 2. */
 }
 
 /* 1. Correct the inheritance and scaling of font size in all browsers. */
 /* 2. Correct the odd `em` font sizing in all browsers. */
 code, kbd, samp {
   font-family: monospace,;  /* 1. */
-  font-size: 1em;                     /* 2. */
+  font-size: 1em;           /* 2. */
 }
 
 kbd {
@@ -209,7 +209,7 @@ iframe {
 /* 1. Remove the border on images inside links in IE 10. */
 /* 2. Set max-width to 100% for responsive images */
 /* 3. Center images by default */
-img {
+img, video {
   border-style: none; /* 1. */
   max-width: 100%; /* 2. */
   display: block;
@@ -235,45 +235,34 @@ button, input, optgroup, select, textarea {
   border-radius: 0;     /* 3. */
   background: none;
   border: 1px solid #ccc;
-  font-size: 1rem;
+
   padding: 0.84rem 0.9375rem 0.7rem;
 }
 
 /* Show the overflow in IE and Edge. */
-button,
-input {
+button, input {
   overflow: visible;
 }
 
 /* Remove the inheritance of text transform in Edge, Firefox, and IE. */
-button,
-select {
+button, select {
   text-transform: none;
 }
 
 /* Correct the inability to style clickable types in iOS and Safari. */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+button:not([disabled]), [type="button"]:not([disabled]), [type="reset"]:not([disabled]), [type="submit"]:not([disabled]) {
   -webkit-appearance: none;
   cursor: pointer;
 }
 
 /* Remove the inner border and padding in Firefox. */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
 /* Restore the focus styles unset by the previous rule. */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
