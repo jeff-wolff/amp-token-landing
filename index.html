@@ -58,7 +58,7 @@
                 </div>
             </div>
         </div>
-        <div class="feature-list-wrap">
+        <div class="feature-list-wrap a-fadein-6">
             <div class="container">
                 <ul class="feature-list">
                     <li>
@@ -78,8 +78,8 @@
             <!-- <img src="images/footer-hero-bg.jpg" alt="" class="footer-hero-bg"> -->
             
             <video disableRemotePlayback autoplay muted loop playsInline poster="images/footer-hero-bg.jpg" class="footer-hero-bg">
-                <source src="videos/ampera-footer.webm?v2" type="video/webm">
-                <source src="videos/ampera-footer.mp4?v2" type="video/mp4">
+                <source src="videos/ampera-footer-bg.webm?v2" type="video/webm">
+                <source src="videos/ampera-footer-bg.mp4?v2" type="video/mp4">
                 <img src="images/footer-hero-bg.jpg">
             </video>
         </div>
@@ -103,10 +103,33 @@
                 <div class="footer-subscribe">
                     <h4 class="title">Stay in touch</h4>
                     <p>Sign up for periodic news about Ampera, Amp, DeFi, and payments</p>
-                    <form action="#">
-                        <div class="subscribe-input"><input type="email" placeholder="Type your email..." required></div>
-                        <div class="subscribe-submit"><input type="submit" value="Subscribe"></div>
-                    </form>
+
+                    <div class="footer-substack">
+                        <!-- <iframe title="Sign up for the Amp newsletter" src="https://amptoken.substack.com/embed" width="320" height="320" frameborder="0" scrolling="no"></iframe> -->
+                        <form action="#">
+                            <div class="subscribe-input"><input type="email" placeholder="Type your email..." disabled></div>
+                            <div class="subscribe-submit"><input type="submit" value="                       " disabled></div>
+                        </form>
+                        <div id="custom-substack-embed"></div>
+    
+                        <script>
+                          window.CustomSubstackWidget = {
+                            substackUrl: "amptoken.substack.com",
+                            placeholder: "Type your email...",
+                            buttonText: "Subscribe",
+                            theme: "custom",
+                            colors: {
+                              primary: "#FFFFFF",
+                              input: "#000000",
+                              email: "#FFFFFF",
+                              text: "#000000",
+                            }
+                          };
+                        </script>
+                        <script src="https://substackapi.com/widget.js" async></script>
+                    </div>
+
+                    
                 </div>
             </div>
             <div class="footer__legal">

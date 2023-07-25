@@ -76,8 +76,9 @@ input, textarea, select, button:not([class]), .button {
     color: #010101;
 }
 input::placeholder {
-    color: #acacac;
-    text-shadow: 1px 1px 0 #fff;
+    opacity: 1 !important;
+    color: #acacac !important;
+    text-shadow: 1px 1px 0 #fff !important;
 }
 
 
@@ -162,26 +163,14 @@ h4 {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    width: 42px;
-    height: 42px;
-}
-@media (min-width: 1025px) {
-    .social-nav a {
-        width: 52px;
-        height: 52px;
-    }
+    width: 52px;
+    height: 52px;
 }
 .social-nav svg {
     fill: white;
     fill: currentColor;
-    width: 23px;
-    height: 23px;
-}
-@media (min-width: 1025px) {
-    .social-nav svg {
-        width: 33px;
-        height: 33px;
-    }
+    width: 25px;
+    height: 25px;
 }
 
 header {
@@ -261,20 +250,36 @@ header .social-nav {
 
 
 .hero {
-    overflow: hidden;
-    
-    min-height: 670px;
+    /* overflow: hidden; */
+    position: relative;
+
+    min-height: 800px;
     height: 100vh;
+    
     
     background-image: linear-gradient(to bottom, rgba(255,255,255,0) 66%,rgba(0,0,0,1) 100%);
 
     padding-top: var(--header-height);
+}
+@media (min-width: 768px) {
+    .hero {
+    }
 }
 @media (min-width: 1025px) {
     .hero {
         min-height: 590px;
         padding-top: var(--header-height-lg);
     }
+}
+.hero::before {
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 8%, rgb(0, 0, 0) 100%);
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 200px;
+    z-index: 2;
 }
 
 .hero-bg {
@@ -286,7 +291,7 @@ header .social-nav {
 
     transform: translateX(-60px) translateY(60px);
     object-fit: cover;
-    z-index: -1;    
+    z-index: 1;    
 }
 
 
@@ -306,6 +311,9 @@ header .social-nav {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    position: relative;
+    z-index: 3;
 }
 
 
@@ -374,9 +382,9 @@ header .social-nav {
     margin-bottom: 0;
 }
 
-.lower-third {
+.lower-third {    
     padding-top: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 @media (min-width: 768px) {
     .lower-third {
@@ -499,7 +507,7 @@ footer {
 
 .footer-hero-bg {
     position: absolute;
-    bottom: 20%;
+    bottom: 0;
     left: 0;
     width: 100%;
     
@@ -549,16 +557,6 @@ footer .social-nav {
     }
 }
 
-footer .social-nav a {
-    width: 50px;
-    height: 50px;
-}
-
-footer .social-nav svg {
-    width: 25px;
-    height: 25px;
-}
-
 
 
 footer .footer__right {
@@ -585,15 +583,57 @@ footer .footer__right {
 .footer-subscribe p {
     font-size: 14px;
 }
+.footer-substack {
+    position: relative;
+    max-width: 366px;
+}
+
+#custom-substack-embed {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 85%;
+}
+@media (min-width: 768px) {
+    #custom-substack-embed {
+        left: auto;
+        width: 104%;
+    }
+}
+/* @media (min-width: 986px) {
+    #custom-substack-embed {
+        width: 107%;
+    }
+} */
+@media (min-width: 1025px) {
+    #custom-substack-embed {
+        width: auto;
+    }
+}
+
 .footer-subscribe form {
     position: relative;
     width: fit-content;
-    width: 90%;
+    width: 89%;
+    border-radius: 0;
+    border: 0;
+    
+    margin-bottom: 20px;
 }
 @media (min-width: 768px) {
     .footer-subscribe form {
-        width: fit-content;
+        width: 100%;
+        /* width: fit-content;
+        transform: scale(.756);
+        margin-left: -36px; */
     }
+}
+@media (min-width: 1025px) {
+    .footer-subscribe form {
+        width: fit-content;
+        transform: none;
+        margin-left: 0;
+    }  
 }
 .subscribe-input {
     position: relative;
@@ -628,10 +668,10 @@ footer .footer__right {
     display: block;
     transform: skewX(-20deg);
 }
-.footer-subscribe input[type="email"],
-.footer-subscribe input[type="text"] {
-    background: white;
-    color: #010101;
+.footer-subscribe input:not([type="submit"]){
+    font-size: 15px !important;
+    background: white !important;
+    color: #010101 !important;
     padding: 17px 20px 16px;
     min-width: 240px;
     width: 100%;
@@ -639,39 +679,86 @@ footer .footer__right {
     height: 57px;
     
 }
-@media (min-width: 768px) {
-    .footer-subscribe input[type="email"],
-    .footer-subscribe input[type="text"] {
 
-        min-width: 320px;
+@media (min-width: 768px) {
+    .footer-subscribe input:not([type="submit"]) {
+
     }
 }
 @media (min-width: 1025px) {
-    .footer-subscribe input[type="email"],
-    .footer-subscribe input[type="text"] {
+    .footer-subscribe input:not([type="submit"]) {
 
         min-width: 400px;
     }
 }
 
-.footer-subscribe input[type="submit"] {
+.footer-subscribe [type="submit"] {
+    font-family: var(--body-font-face);
     height: 46px;
     border: none;
-
-
-    background: black;
-    color: #fff;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    line-height: 1 !important;
+    background: black !important;
+    color: #fff !important;
     margin-top: 4.5px;
     padding: 17px 20px 16px;
 }
 .footer-subscribe input[type="submit"]:hover {
     color: #fff;
 }
-.subscribe-submit {
+.footer-subscribe button[type="submit"] {
     position: absolute;
     top: 0;
-    right: -7px;
+    right: 0;
+}
+.footer-subscribe form.custom-substack-widget {
+    width: 100%;
+}
+.footer-subscribe form.custom-substack-widget input:not([type="submit"]){
+    height: 52px;
+    min-width: 256px;
+    padding-right: 110px;
+    margin-right: 60px;
+    margin-top: 2px;
+    /* border: 1px solid red; */
+}
+@media (min-width: 768px) {
+    .footer-subscribe form.custom-substack-widget input:not([type="submit"]){
+        /* min-width: 320px; */
+    }
+}
+@media (min-width: 1025px) {
+    .footer-subscribe form.custom-substack-widget input:not([type="submit"]){
+        min-width: 320px;
+    }  
+}
+.footer-subscribe form.custom-substack-widget button[type="submit"] {
+    position: absolute;
+    margin-top: 3px;
+    right: -3px;
     z-index: 2;
+}
+@media (min-width: 768px) {
+    .footer-subscribe form.custom-substack-widget button[type="submit"] {
+        right: 4.5%;
+        margin-top: 4px;
+    }
+}
+@media (min-width: 1025px) {
+    .footer-subscribe form.custom-substack-widget button[type="submit"] {
+        right: -7px;
+    }
+}
+
+
+
+.subscribe-submit{
+    position: absolute;
+    top: 0;
+    right: -3px;
+    z-index: 2;
+    
     /* z-index: 13; */
 }
 @media (min-width: 768px) {
@@ -702,6 +789,7 @@ footer .footer__right {
     transform: skewX(-20deg);
     z-index: 1;
 } */
+
 
 
 footer .logo {
@@ -815,6 +903,11 @@ footer .logo {
 .a-fadein-5 {
     opacity: 0;
     animation: 1s fadein 2.333s forwards;
+}
+
+.a-fadein-6 {
+    opacity: 0;
+    animation: 1s fadein 2.533s forwards;
 }
 
 .a-zoom {

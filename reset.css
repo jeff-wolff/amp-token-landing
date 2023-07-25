@@ -291,7 +291,7 @@ button:not([class]):not([disabled]):hover, .button:hover, input[type="submit"]:h
 }
 
 button:disabled, input:disabled {
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 
 /* Correct the inability to style clickable types in iOS and Safari. */
