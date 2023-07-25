@@ -747,7 +747,7 @@ footer .footer__right {
 }
 @media (min-width: 1025px) {
     .footer-subscribe form.custom-substack-widget button[type="submit"] {
-        right: -7px;
+        right: -10px;
     }
 }
 
