@@ -123,6 +123,7 @@ a:hover {
 }
 
 input, textarea, select, button:not([class]), .button {
+    font-family: var(--body-font-face);
     border: 1px solid #fff;
     color: #fff;
     transition: .125s ease color, .125s ease background-color;
